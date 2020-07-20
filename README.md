@@ -2,6 +2,8 @@
 
 ![main](https://user-images.githubusercontent.com/38618187/87856854-d53de900-c95c-11ea-9a0e-836aa9aae633.gif)
 
+> [배포링크](https://move-block-event-delegation.herokuapp.com/index.html)로 들어가시면 데모를 확인할 수 있습니다.
+
 블록의 이동을 구현할 때, 각 블록마다 이벤트를 등록하진 않으셨나요??
 
 각각 이벤트를 등록하고 잘 동작하게 구현하셨다면 다음 글을 읽어보시는것은 어떨까요??
