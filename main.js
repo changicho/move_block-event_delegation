@@ -56,6 +56,10 @@ function mousemove(event) {
 }
 
 function mousedown(event) {
+  if (event.button !== 0) {
+    return;
+  }
+
   clicked = true;
   targetRemove = event.target.closest("li");
   if (targetRemove === null || targetRemove.className === "start") {
@@ -75,6 +79,10 @@ function mousedown(event) {
 }
 
 function mouseup() {
+  if (!clicked) {
+    return;
+  }
+
   clicked = false;
   if (targetLi) {
     targetLi.classList.remove("temp");

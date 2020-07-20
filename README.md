@@ -200,6 +200,10 @@ let clicked = false;
 let hoverLi = undefined;
 
 function mousedown(event) {
+  // 마우스 왼쪽클릭 & 터치가 아닌 경우 예외처리합니다.
+  if (event.button !== 0) {
+    return;
+  }
   // 클릭했으므로 clicked를 설정합니다.
   clicked = true;
   // 현재 클릭한 element에서 가장 가까운 li 태그를 찾습니다.
@@ -227,6 +231,11 @@ function mousedown(event) {
 }
 
 function mouseup() {
+  // 클릭되지 않은 상태면 실행하지 않습니다.
+  if (!clicked) {
+    return;
+  }
+
   clicked = false; // 클릭이 종료되었으므로 했으므로 clicked를 설정합니다.
   if (targetLi) {
     // targetLi가 있으면 class를 제거해주세요
